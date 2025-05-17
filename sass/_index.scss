@@ -1,0 +1,198 @@
+@use "_mixin";
+@use "_variable" as g;
+
+
+// レイアウト
+// キービジュアル
+.ly_kv{
+    padding: 110px 0 24px;
+}
+
+
+// ブロックモジュール
+// キービジュアル
+.bl_kv_inner{
+    width: 90%;
+    margin: 0 auto;
+}
+@include mixin.mq("pc"){
+    .bl_kv_inner{
+        width: 80%;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+}
+
+// キービジュアルロゴ
+.bl_kv_imgWrapper{
+    max-width: 540px;
+    animation: kv_an 2s infinite alternate;
+    img{
+        width: 100%;
+    }
+}
+// ふわふわアニメーション
+@keyframes kv_an{
+    from{
+        transform: translateY(-10px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+// コピー部分
+.bl_kv_body{
+    margin-top: 32px;
+    max-width: 380px;
+}
+// メインコピー
+.bl_kv_mainCopy{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 155%;
+}
+@include mixin.mq("pc"){
+    .bl_kv_mainCopy{
+        font-size: 38px;
+    }
+}
+// 機能リスト
+.bl_kv_function_list{
+    margin-top: 14px;
+}
+.bl_kv_function_listItem{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 8px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.bl_kv_function_listItem::before{
+    display: inline-block;
+    content: "";
+    width: 14px;
+    height: 10px;
+    border-bottom: 3px solid g.$border-lightBase;
+    border-left: 3px solid g.$border-lightBase;
+    transform: rotate(-45deg);
+    vertical-align: middle;
+}
+@include mixin.mq("pc"){
+    .bl_kv_function_list{
+        margin-top: 20px;
+    }
+    .bl_kv_function_listItem{
+        font-size: 18px;
+    }
+    .bl_kv_function_listItem::before{
+        width: 18px;
+        height: 12px;
+    }
+}
+
+
+// 快適さへのこだわり
+.bl_comit_list{
+    margin-top: 40px;
+}
+@include mixin.mq("pc"){
+    .bl_comit_list{
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+// リストアイテム
+.bl_comit_listItem{
+    margin: 0 auto;
+    max-width: 344px;
+}
+.bl_comit_listItem + .bl_comit_listItem{
+    margin-top: 40px;
+}
+// 画像
+.bl_comit_listItem_imgWrapper{
+    text-align: center;
+}
+// ボディ
+.bl_comit_listItem_ttl{
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 150%;
+    text-align: center;
+}
+.bl_comit_listItem_txt{
+    margin-top: 16px;
+    text-align: center;
+}
+@include mixin.mq("pc"){
+    .bl_comit_listItem_ttl{
+        font-size: 22px;
+    }
+}
+
+
+// .docの機能
+.bl_function_list{
+    margin-top: 40px;
+    max-width: 1080px;
+}
+// リストアイテム
+.bl_function_listItem + .bl_function_listItem{
+    margin-top: 40px;
+}
+// 画像
+.bl_function_listItem_imgWrapper{
+    max-width: 600px;
+    img{
+        width: 100%;
+    }
+}
+// ボディ
+.bl_function_listItem_txt_group{
+    margin-top: 14px;
+    max-width: 370px;
+}
+.bl_function_listItem_ttl{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 150%;
+    color: g.$font-color-light;
+}
+.bl_function_listItem_txt{
+    margin-top: 8px;
+    color: g.$font-color-light;
+}
+@include mixin.mq("pc"){
+    .bl_function_list{
+        margin-top: 80px;
+    }
+    .bl_function_listItem{
+        figure{
+            display: flex;
+            justify-content: space-between;
+            gap: 56px;
+        }
+    }
+    .bl_function_listItem:nth-child(2){
+        figure{
+            flex-direction: row-reverse;
+        }
+    }
+    .bl_function_listItem + .bl_function_listItem{
+        margin-top: 64px;
+    }
+    .bl_function_listItem_ttl{
+        font-size: 22px;
+    }
+    .bl_function_listItem_txt{
+        margin-top: 16px;
+    }
+}

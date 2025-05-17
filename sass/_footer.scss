@@ -1,0 +1,58 @@
+@use "_mixin";
+@use "_variable" as g;
+
+// レイアウト
+.ly_footer{
+    width: 100%;
+    padding: 40px 0 24px;
+}
+@include mixin.mq("pc"){
+    .ly_footer{
+        padding: 64px 0 24px;
+    }
+}
+
+
+// ブロックモジュール
+.bl_footer_inner{
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+@include mixin.mq("pc"){
+    .bl_footer_inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+// ナビゲーションメニュー
+.bl_footer_nav_listItem{
+    text-align: center;
+    color: g.$font-color-base;
+    transition: all 0.3s;
+}
+.bl_footer_nav_listItem:hover{
+    opacity: 0.7;
+}
+.bl_footer_nav_listItem + .bl_footer_nav_list_line{
+    margin-top: 8px;
+}
+// コピーライト
+.bl_footer_copyRight_wrapper{
+    text-align: center;
+    margin-top: 8px;
+}
+@include mixin.mq("pc"){
+    .bl_footer_nav_list_line{
+        width: 1px;
+        height: 16px;
+        transform: rotate(15deg);
+        background: g.$border-base;
+    }
+    .bl_footer_nav_list{
+        display: flex;
+        gap: 12px;
+    }
+}

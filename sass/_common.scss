@@ -1,0 +1,154 @@
+@use "_mixin";
+@use "_variable" as g;
+
+// ベーススタイル
+body{
+    font-size: 14px;
+    font-family: g.$font-family-jp;
+    color: g.$font-color-base;
+    line-height: 175%;
+}
+span{
+    display: block;
+}
+// PC
+@include mixin.mq("pc"){
+    body{
+        font-size: 16px;
+    }
+}
+
+// ブロックモジュール
+// コンテンツ幅
+.bl_cont_inner{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+// PC
+@include mixin.mq("pc"){
+    .bl_cont_inner{
+        width: 80%;
+    }
+}
+// 画像
+.bl_imgWrapper img{
+    width: 100%;
+}
+
+// ユニークモジュール
+.un_lb__reverse{
+    display: none;
+}
+@include mixin.mq("pc"){
+    .un_lb{
+        display: none;
+    }
+    .un_lb__reverse{
+        display: block;
+    }
+}
+
+
+// レイアウト
+.ly_cont{
+    padding: 80px 0;
+}
+// セクションタイトル
+.ly_secTtl{
+    text-align: center;
+}
+// ボタン
+.ly_btn{
+    margin-top: 24px;
+    overflow: hidden;
+}
+
+
+// ブロックモジュール
+// 背景色
+.bl_contBg_light{
+    background: g.$bg-light;
+}
+.bl_contBg_dark{
+    background: g.$bg-dark;
+}
+// セクションチェンジ
+.bl_secChange{
+    img{
+        width: 100%;
+    }
+}
+
+
+
+// エレメントモジュール
+// セクションタイトル
+.el_secTtl{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 155%;
+}
+.el_secTtl__white{
+    color: g.$font-color-light;
+}
+@include mixin.mq("pc"){
+    .el_secTtl{
+        font-size: 32px;
+    }
+}
+// ボタン
+.el_btn{
+    display: inline-block;
+    padding: 14.5px 58px;
+    background: g.$bg-button;
+    border: 1px solid g.$bg-button;
+    color: g.$font-color-light;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.3s;
+    transform: translateY(80px);
+}
+.el_btn::before{
+    display: inline-block;
+    content: "";
+    width: 12px;
+    height: 2px;
+    background: g.$bg-light;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transition: all 0.3s;
+}
+.el_btn::after{
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid g.$bg-light;
+    border-right: 2px solid g.$bg-light;
+    transform: translateY(-50%) rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transition: all 0.3s;
+}
+.el_btn:hover{
+    background: g.$bg-light;
+    color: g.$font-color-base;
+}
+.el_btn:hover::before{
+    background: g.$bg-button;
+}
+.el_btn:hover::after{
+    border-bottom: 2px solid g.$bg-button;
+    border-right: 2px solid g.$bg-button;
+}
+@include mixin.mq("pc"){
+    .el_btn{
+        font-size: 18px;
+    }
+}
