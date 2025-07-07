@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="画像パス">
-    <link rel="apple-touch-icon-precomposed" href="画像のパス" />
-    <meta name="msapplication-TileImage" content="画像のパス" />
-    <meta name="msapplication-TileColor" content="カラーコード（例：#F89174）" />
+    <link rel="apple-touch-icon-precomposed" href="画像のパス">
+    <meta name="msapplication-TileImage" content="画像のパス">
+    <meta name="msapplication-TileColor" content="カラーコード（例：#F89174）">
     <title>サービスサイトデモ</title>
     <meta name="description" content="まなとが制作したサービスサイトデモです。">
 
@@ -65,12 +65,24 @@
 
                 <!-- キービジュアル画像 -->
                 <picture class="bl_kv_imgWrapper">
+
+                    <!-- WebP -->
+                    <source media="(max-width: 400px)" srcset="img/sp_kv_img-1000px.webp" type="image/webp">
+                    <source media="(max-width: 500px)" srcset="img/sp_kv_img-1500px.webp" type="image/webp">
+                    <source media="(max-width: 768px)" srcset="img/sp_kv_img-2000px.webp" type="image/webp">
+                    <source media="(max-width: 1080px)" srcset="img/pc_kv_img-2500px.webp" type="image/webp">
+                    <source media="(max-width: 2000px)" srcset="img/pc_kv_img-3000px.webp" type="image/webp">
+                    <source srcset="img/pc_kv_img-3500px.webp" type="image/webp">
+
+                    <!-- 非対応時 -->
                     <source media="(max-width: 400px)" srcset="img/sp_kv_img-1000px.png">
                     <source media="(max-width: 500px)" srcset="img/sp_kv_img-1500px.png">
                     <source media="(max-width: 768px)" srcset="img/sp_kv_img-2000px.png">
                     <source media="(max-width: 1080px)" srcset="img/pc_kv_img-2500px.png">
                     <source media="(max-width: 2000px)" srcset="img/pc_kv_img-3000px.png">
+
                     <img src="img/pc_kv_img-3500px.png" alt="">
+
                 </picture>
 
                 <!-- キービジュアルコピー部分 -->
@@ -96,12 +108,24 @@
         <!-- 波セクションチェンジ -->
         <div class="bl_secChange" aria-hidden="true">
             <picture>
+
+                <!-- WebP -->
+                <source media="(max-width: 400px)" srcset="img/sp_secChange-1000px.webp" type="image/webp">
+                <source media="(max-width: 500px)" srcset="img/sp_secChange-1500px.webp" type="image/webp">
+                <source media="(max-width: 768px)" srcset="img/sp_secChange-2000px.webp" type="image/webp">
+                <source media="(max-width: 1080px)" srcset="img/pc_secChange-2500px.webp" type="image/webp">
+                <source media="(max-width: 2000px)" srcset="img/pc_secChange-3000px.webp" type="image/webp">
+                <source srcset="img/pc_secChange-3500px.webp" type="image/webp">
+
+                <!-- 非対応時 -->
                 <source media="(max-width: 400px)" srcset="img/sp_secChange-1000px.png">
                 <source media="(max-width: 500px)" srcset="img/sp_secChange-1500px.png">
                 <source media="(max-width: 768px)" srcset="img/sp_secChange-2000px.png">
                 <source media="(max-width: 1080px)" srcset="img/pc_secChange-2500px.png">
                 <source media="(max-width: 2000px)" srcset="img/pc_secChange-3000px.png">
+
                 <img src="img/pc_secChange-3500px.png" alt="">
+
             </picture>
         </div>
 
@@ -174,12 +198,23 @@
         <!-- 波セクションチェンジ -->
         <div class="bl_secChange" aria-hidden="true">
             <picture>
+                <!-- WebP -->
+                <source media="(max-width: 400px)" srcset="img/sp_secChange2-1000px.webp" type="image/webp">
+                <source media="(max-width: 500px)" srcset="img/sp_secChange2-1500px.webp" type="image/webp">
+                <source media="(max-width: 768px)" srcset="img/sp_secChange2-2000px.webp" type="image/webp">
+                <source media="(max-width: 1080px)" srcset="img/pc_secChange2-2500px.webp" type="image/webp">
+                <source media="(max-width: 2000px)" srcset="img/pc_secChange2-3000px.webp" type="image/webp">
+                <source srcset="img/pc_secChange2-3500px.webp" type="image/webp">
+
+                <!-- 非対応時 -->
                 <source media="(max-width: 400px)" srcset="img/sp_secChange2-1000px.png">
                 <source media="(max-width: 500px)" srcset="img/sp_secChange2-1500px.png">
                 <source media="(max-width: 768px)" srcset="img/sp_secChange2-2000px.png">
                 <source media="(max-width: 1080px)" srcset="img/pc_secChange2-2500px.png">
                 <source media="(max-width: 2000px)" srcset="img/pc_secChange2-3000px.png">
+
                 <img src="img/pc_secChange2-3500px.png" alt="">
+
             </picture>
         </div>
         <!-- .docの機能 -->
@@ -199,12 +234,24 @@
                     <li class="bl_function_listItem js-fadeIn">
                         <figure>
                             <picture class="bl_function_listItem_imgWrapper">
+
+                                <!-- WebP -->
+                                <source media="(max-width: 400px)" srcset="img/sp_function_img-1000px.webp" type="image/webp">
+                                <source media="(max-width: 500px)" srcset="img/sp_function_img-1500px.webp" type="image/webp">
+                                <source media="(max-width: 768px)" srcset="img/sp_function_img-2000px.webp" type="image/webp">
+                                <source media="(max-width: 1080px)" srcset="img/pc_function_img-2500px.webp" type="image/webp">
+                                <source media="(max-width: 2000px)" srcset="img/pc_function_img-3000px.webp" type="image/webp">
+                                <source srcset="img/pc_function_img-3500px.webp" type="image/webp">
+
+                                <!-- 非対応時 -->
                                 <source media="(max-width: 400px)" srcset="img/sp_function_img-1000px.png">
                                 <source media="(max-width: 500px)" srcset="img/sp_function_img-1500px.png">
                                 <source media="(max-width: 768px)" srcset="img/sp_function_img-2000px.png">
                                 <source media="(max-width: 1080px)" srcset="img/pc_function_img-2500px.png">
                                 <source media="(max-width: 2000px)" srcset="img/pc_function_img-3000px.png">
+
                                 <img src="img/pc_function_img-3500px.png" alt="ドキュメント作成">
+
                             </picture>
                             <figcaption class="bl_function_listItem_txt_group">
                                 <h3 class="bl_function_listItem_ttl">ドキュメント作成</h3>
@@ -219,12 +266,24 @@
                     <li class="bl_function_listItem js-fadeIn">
                         <figure>
                             <picture class="bl_function_listItem_imgWrapper">
+
+                                <!-- WebP -->
+                                <source media="(max-width: 400px)" srcset="img/sp_function_img2-1000px.webp" type="image/webp">
+                                <source media="(max-width: 500px)" srcset="img/sp_function_img2-1500px.webp" type="image/webp">
+                                <source media="(max-width: 768px)" srcset="img/sp_function_img2-2000px.webp" type="image/webp">
+                                <source media="(max-width: 1080px)" srcset="img/pc_function_img2-2500px.webp" type="image/webp">
+                                <source media="(max-width: 2000px)" srcset="img/pc_function_img2-3000px.webp" type="image/webp">
+                                <source srcset="img/pc_function_img2-3500px.webp" type="image/webp">
+
+                                <!-- 非対応時 -->
                                 <source media="(max-width: 400px)" srcset="img/sp_function_img2-1000px.png">
                                 <source media="(max-width: 500px)" srcset="img/sp_function_img2-1500px.png">
                                 <source media="(max-width: 768px)" srcset="img/sp_function_img2-2000px.png">
                                 <source media="(max-width: 1080px)" srcset="img/pc_function_img2-2500px.png">
                                 <source media="(max-width: 2000px)" srcset="img/pc_function_img2-3000px.png">
+
                                 <img src="img/pc_function_img2-3500px.png" alt="webページとして共有可能">
+
                             </picture>
                             <figcaption class="bl_function_listItem_txt_group">
                                 <h3 class="bl_function_listItem_ttl">webページとして共有可能</h3>
@@ -239,6 +298,16 @@
                     <li class="bl_function_listItem js-fadeIn">
                         <figure>
                             <picture class="bl_function_listItem_imgWrapper">
+
+                                <!-- WebP -->
+                                <source media="(max-width: 400px)" srcset="img/sp_function_img3-1000px.webp" type="image/webp">
+                                <source media="(max-width: 500px)" srcset="img/sp_function_img3-1500px.webp" type="image/webp">
+                                <source media="(max-width: 768px)" srcset="img/sp_function_img3-2000px.webp" type="image/webp">
+                                <source media="(max-width: 1080px)" srcset="img/pc_function_img3-2500px.webp" type="image/webp">
+                                <source media="(max-width: 2000px)" srcset="img/pc_function_img3-3000px.webp" type="image/webp">
+                                <source srcset="img/pc_function_img3-3500px.webp" type="image/webp">
+
+                                <!-- 非対応時 -->
                                 <source media="(max-width: 400px)" srcset="img/sp_function_img3-1000px.png">
                                 <source media="(max-width: 500px)" srcset="img/sp_function_img3-1500px.png">
                                 <source media="(max-width: 768px)" srcset="img/sp_function_img3-2000px.png">
@@ -261,12 +330,23 @@
         <!-- 波セクションチェンジ -->
         <div class="bl_secChange" aria-hidden="true">
             <picture>
+
+                <!-- WebP -->
+                <source media="(max-width: 400px)" srcset="img/sp_secChange3-1000px.webp" type="image/webp">
+                <source media="(max-width: 500px)" srcset="img/sp_secChange3-1500px.webp" type="image/webp">
+                <source media="(max-width: 768px)" srcset="img/sp_secChange3-2000px.webp" type="image/webp">
+                <source media="(max-width: 1080px)" srcset="img/pc_secChange3-2500px.webp" type="image/webp">
+                <source media="(max-width: 2000px)" srcset="img/pc_secChange3-3000px.webp" type="image/webp">
+                <source srcset="img/pc_secChange3-3500px.webp" type="image/webp">
+
+                <!-- 非対応時 -->
                 <source media="(max-width: 400px)" srcset="img/sp_secChange3-1000px.png">
                 <source media="(max-width: 500px)" srcset="img/sp_secChange3-1500px.png">
                 <source media="(max-width: 768px)" srcset="img/sp_secChange3-2000px.png">
                 <source media="(max-width: 1080px)" srcset="img/pc_secChange3-2500px.png">
                 <source media="(max-width: 2000px)" srcset="img/pc_secChange3-3000px.png">
                 <img src="img/pc_secChange3-3500px.png" alt="">
+
             </picture>
         </div>
     </main>
