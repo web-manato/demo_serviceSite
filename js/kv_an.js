@@ -5,12 +5,7 @@ var mainCopy = document.querySelectorAll('.bl_kv_mainCopy');
 var listItem = document.querySelectorAll('.bl_kv_function_listItem');
 var btn = document.querySelectorAll('.el_btn');
 
-tl.from(img, {
-        delay: 0.3,
-        autoAlpha: 0,
-        duration: 0.6,
-    })
-    .from(mainCopy, {
+tl.from(mainCopy, {
         autoAlpha: 0,
         duration: 0.8,
     })
