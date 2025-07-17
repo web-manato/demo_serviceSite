@@ -10,7 +10,6 @@ tl.from(img, {
         duration: 0.6,
     })
     .from(mainCopy, {
-        delay: 0.5,
         autoAlpha: 0,
         duration: 0.8,
     })
