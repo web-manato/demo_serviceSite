@@ -6,6 +6,7 @@ var listItem = document.querySelectorAll('.bl_kv_function_listItem');
 var btn = document.querySelectorAll('.el_btn');
 
 tl.from(img, {
+        delay: 0.3,
         autoAlpha: 0,
         duration: 0.6,
     })
