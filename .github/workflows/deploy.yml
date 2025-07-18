@@ -18,4 +18,21 @@ jobs:
         user: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         localDir: './'
-        remoteDir: '/web-manato.com/public_html/portfolio.web-manato.com/demo/docs'
+        remoteDir: '/web-manato.com/public_html/'
+        exclude: |
+          README.md
+          README.txt
+          .github/
+          .git/
+          .gitignore
+          .gitattributes
+          node_modules/
+          package.json
+          package-lock.json
+          yarn.lock
+          .env
+          .env.local
+          .env.example
+          *.log
+          .DS_Store
+          Thumbs.db
