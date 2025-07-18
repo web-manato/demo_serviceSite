@@ -155,6 +155,8 @@ span {
 
 .bl_secChange img {
   width: 100%;
+  height: auto;
+  max-height: 200px;
 }
 
 .el_secTtl {
@@ -258,6 +260,7 @@ span {
 }
 .bl_kv_imgWrapper img {
   width: 100%;
+  height: auto;
 }
 
 @-webkit-keyframes kv_an {
@@ -386,6 +389,7 @@ span {
 }
 .bl_function_listItem_imgWrapper img {
   width: 100%;
+  height: auto;
 }
 
 .bl_function_listItem_txt_group {
