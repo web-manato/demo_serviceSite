@@ -31,8 +31,17 @@
     max-width: 540px;
     animation: kv_an 2s infinite alternate;
     img{
+        display: block;
         width: 100%;
         height: auto;
+
+        @include mixin.mq("tab") {
+            width: 80%;
+            margin: 0 auto;
+        }
+        @include mixin.mq("pc") {
+            width: 100%;
+        }
     }
 }
 // ふわふわアニメーション
@@ -48,7 +57,11 @@
 // コピー部分
 .bl_kv_body{
     margin-top: 32px;
-    max-width: 380px;
+    max-width: 500px;
+
+    @include mixin.mq("pc") {
+        max-width: 380px;
+    }
 }
 // メインコピー
 .bl_kv_mainCopy{

@@ -259,8 +259,20 @@ span {
           animation: kv_an 2s infinite alternate;
 }
 .bl_kv_imgWrapper img {
+  display: block;
   width: 100%;
   height: auto;
+}
+@media screen and (min-width: 768px) {
+  .bl_kv_imgWrapper img {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .bl_kv_imgWrapper img {
+    width: 100%;
+  }
 }
 
 @-webkit-keyframes kv_an {
@@ -282,7 +294,12 @@ span {
 }
 .bl_kv_body {
   margin-top: 32px;
-  max-width: 380px;
+  max-width: 500px;
+}
+@media screen and (min-width: 1080px) {
+  .bl_kv_body {
+    max-width: 380px;
+  }
 }
 
 .bl_kv_mainCopy {
